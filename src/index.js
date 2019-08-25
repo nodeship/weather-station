@@ -1,5 +1,3 @@
-import {WeatherStation} from './weather-station';
-
-const weatherStation = new WeatherStation();
+import {weatherStation} from './bootstrap';
 
 weatherStation.start();
