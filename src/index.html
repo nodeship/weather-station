@@ -8,9 +8,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
+      
+
     <div class="container text-center mt-5">
-        <div id="currentWeather" class="card" style="width: 18rem;">
-          <img id="weatherIcon" class="card-img-top" src="" alt="Card image cap">
+        <div id="currentWeather" class="card">
+            <div>
+                <img id="spinner" src="assets/spinner.svg" >
+              </div>
+         <img class="hidden" id="weatherIcon" class="card-img-top" src="" alt="Card image cap">
           <div  class="card-body">
             <h5 id="cardTitle" class="card-title"></h5>
             <div id="weatherDetails"></div>
