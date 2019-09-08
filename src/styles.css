@@ -1,0 +1,11 @@
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+#currentWeather {
+    width: 18rem;
+}
