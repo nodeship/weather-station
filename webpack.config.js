@@ -37,7 +37,7 @@ module.exports = {
   devServer: {
     hot: true,
     writeToDisk: true,
-    port: 9000,
+    port: 3333,
     contentBase: path.resolve(__dirname, './dist')
   },
   plugins: [
