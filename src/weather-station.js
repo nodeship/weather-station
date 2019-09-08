@@ -1,7 +1,4 @@
 import {getUserLocation} from './geolocation';
-import {WeatherService} from './weather.service';
-import { strict } from 'assert';
-
 
 export const tempUnits = {
   Celsius: 'CELSIUS',
@@ -17,16 +14,14 @@ export class WeatherStation {
     this.toCBtn.addEventListener('click', () => this.render(tempUnits.Celsius));
   }
 
-  start() {
-    return getUserLocation()
-    .then(position => this.weatherService.get(position.coords))
-    .then(weather => {
-      if (weather) {
-        this.toggleImages();
-      }
-      this.weather = weather;
-      this.render()
-    });
+  async start() {
+    const position = await getUserLocation()
+    const weather = await this.weatherService.get(position.coords);
+    if (weather) {
+      this.toggleImages();
+    }
+    this.weather = weather;
+    this.render();
   }
 
   toggleImages() {
